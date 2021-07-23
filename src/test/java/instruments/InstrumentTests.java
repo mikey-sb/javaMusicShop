@@ -37,4 +37,9 @@ public class InstrumentTests {
     public void hasSellPrice(){
         assertEquals(700, bassGuitar.getSellPrice(), 0.0);
     }
+
+    @Test
+    public void hasMarkup(){
+        assertEquals(201.07, bassGuitar.calculateMarkup(), 0.0);
+    }
 }

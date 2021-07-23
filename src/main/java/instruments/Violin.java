@@ -1,8 +1,9 @@
 package instruments;
 
 import interfaces.IPlay;
+import interfaces.ISell;
 
-public class Violin extends Instrument implements IPlay {
+public class Violin extends Instrument implements IPlay, ISell {
     private int stringCount;
     public Violin(String model, String color, String sound, double buyPrice, double sellPrice, int stringCount) {
         super(model, color, sound, buyPrice, sellPrice);
@@ -17,5 +18,10 @@ public class Violin extends Instrument implements IPlay {
 
     public int getStringCount() {
         return stringCount;
+    }
+
+    @Override
+    public double calculateMarkup() {
+        return getSellPrice() - getBuyPrice();
     }
 }

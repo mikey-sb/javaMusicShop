@@ -17,4 +17,5 @@ public class BassGuitarTests {
     public void hasStringCount(){
         assertEquals(4, bassGuitar.getStringCount());
     }
+
 }
